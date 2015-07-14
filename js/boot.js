@@ -1,3 +1,4 @@
+
 Cenit = {
 	//variables globales a todo el juego
     score: 0,

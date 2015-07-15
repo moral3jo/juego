@@ -9,10 +9,11 @@ Cenit.Menu.prototype = {
 	create: function () {
 		console.log("menu:create");
         this.add.image(10, 10, 'sky');
+		this.startGame();//a llamar desde el botón play
 	},
 	update: function () {
 	},
 	startGame: function (pointer) {
-//		this.state.start('Game');
+		this.state.start('Game');
 	}
 };

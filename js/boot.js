@@ -18,12 +18,14 @@ Cenit.Boot.prototype = {
 		game.load.image("topleft", "topleft.png");
 		game.load.image("center", "center.png");
 		game.load.image("bottomright", "bottomright.png");
+		//carga imagenes para pantalla de loading
+		this.load.image('preloaderBar', 'imgs/preload.png');//barra de preloader
     },
 	create:function(){
 		console.log("boot:create");
-		game.add.sprite(0,0,"topleft");
-		game.add.sprite(game.width/2,game.height/2,"center").anchor.set(0.5,0.5);	
-		game.add.sprite(game.width,game.height,"bottomright").anchor.set(1,1);		
+		//game.add.sprite(0,0,"topleft");
+		//game.add.sprite(game.width/2,game.height/2,"center").anchor.set(0.5,0.5);	
+		//game.add.sprite(game.width,game.height,"bottomright").anchor.set(1,1);		
 		game.state.start("Preloader");
 	}
 }
@@ -52,6 +54,6 @@ window.onload = function() {
 	game.state.add('Boot', Cenit.Boot);
 	game.state.add('Preloader', Cenit.Preloader);
     game.state.add('Menu', Cenit.Menu);
-    //game.state.add('Game', Cenit.Game);
+    game.state.add('Game', Cenit.Game);
 	game.state.start('Boot');
 }
